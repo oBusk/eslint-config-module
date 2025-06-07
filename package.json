@@ -5,13 +5,16 @@
   "description": "A strict configuration for building modern modules",
   "keywords": [
     "eslint",
-    "eslintconfig",
+    "eslint-config",
+    "prettier",
+    "typescript",
+    "config",
     "module"
   ],
   "main": "index.js",
   "files": [],
   "author": "Oscar Busk <oscar.busk@gmail.com>",
-  "license": "ISC",
+  "license": "0BSD",
   "repository": {
     "url": "git+https://github.com/oBusk/eslint-config-module.git"
   },
