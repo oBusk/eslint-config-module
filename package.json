@@ -1,6 +1,6 @@
 {
   "name": "@obusk/eslint-config-module",
-  "version": "0.1.0-0",
+  "version": "0.1.0-1",
   "type": "module",
   "description": "A strict configuration for building modern modules",
   "keywords": [
