@@ -31,12 +31,8 @@
   "simple-git-hooks": {
     "pre-commit": "npm run lint-staged"
   },
-  "lint-staged": {
-    "**/*.{md,js,json,yml}": [
-      "prettier --write"
-    ]
-  },
   "scripts": {
+    "typecheck": "tsc -p jsconfig.json --noEmit",
     "prettier": "prettier **/*.{md,js,json,yml} --ignore-path .gitignore --check",
     "prettier-fix": "prettier **/*.{md,js,json,yml} --ignore-path .gitignore --write",
     "lint-staged": "lint-staged"
@@ -45,14 +41,15 @@
     "@eslint/eslintrc": "^3.3.1",
     "@typescript-eslint/eslint-plugin": "^8.33.1",
     "@typescript-eslint/parser": "^8.33.1",
+    "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jest": "^28.12.0",
+    "eslint-plugin-jest": "^28.13.0",
     "eslint-plugin-jsdoc": "^50.7.1",
     "eslint-plugin-prettier": "^5.4.1"
   },
   "peerDependencies": {
-    "eslint": "^9.0.0",
+    "eslint": "^9.28.0",
     "jest": "*",
     "prettier": ">=3.0.0",
     "typescript": "~5.8.0"
@@ -60,6 +57,7 @@
   "devDependencies": {
     "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
-    "simple-git-hooks": "^2.13.0"
+    "simple-git-hooks": "^2.13.0",
+    "typescript": "^5.8.3"
   }
 }

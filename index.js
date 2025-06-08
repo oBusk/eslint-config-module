@@ -2,14 +2,11 @@ import { FlatCompat } from "@eslint/eslintrc";
 import jest from "eslint-plugin-jest";
 import jsdoc from "eslint-plugin-jsdoc";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
-import tailwind from "eslint-plugin-tailwindcss";
+import { defineConfig } from "eslint/config";
 
 const compat = new FlatCompat({ baseDirectory: import.meta.dirname });
 
-/**
- * @type {import("eslint").Linter.Config[]}
- */
-const eslintConfig = [
+const eslintConfig = defineConfig(
   ...compat.config({
     root: true,
     extends: ["plugin:import/recommended", "plugin:import/typescript"],
@@ -52,14 +49,6 @@ const eslintConfig = [
     },
   }),
 
-  // Tailwind
-  ...tailwind.configs["flat/recommended"],
-  {
-    settings: {
-      tailwindcss: { callees: ["clsx", "cx", "cva", "twMerge"] },
-    },
-  },
-
   // JSDoc
   jsdoc.configs["flat/recommended-typescript-flavor-error"],
   {
@@ -82,6 +71,6 @@ const eslintConfig = [
 
   // Prettier
   eslintPluginPrettierRecommended,
-];
+);
 
 export default eslintConfig;

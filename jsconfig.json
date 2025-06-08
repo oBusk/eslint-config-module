@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "noEmit": true,
+    "lib": ["ES2023"],
+    "module": "nodenext",
+    "target": "es2023"
+  },
+  "exclude": ["node_modules"]
+}
